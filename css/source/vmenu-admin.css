@@ -1,0 +1,29 @@
+/**
+ * Admin side CSS
+ *
+ * @package Vallejo Menu Plugin
+ */
+
+.premise-admin,
+.premise-admin p {
+	font-size: 20px;
+}
+
+/**
+ * @600px - Would be considered a mobile device
+ */
+@media screen and (max-width:600px) {
+	.vmenu-admin .premise-row > .span5,
+	.vmenu-admin .premise-row > .span6,
+	.vmenu-admin .premise-row > .span7 {
+		width:98%;
+		clear:both;
+	}
+
+	/* Responsive Auto Share logs table */
+	.vmenu-admin .auto-share-logs-table td,
+	.vmenu-admin .auto-share-logs-table th {
+		display: block;
+		width: 100%;
+	}
+}

@@ -1,0 +1,369 @@
+/*
+ * Front end CSS Styling
+ *
+ * @package Vallejo Menu Plugin
+ */
+
+/* Links */
+.vmenu-category:not(.current),
+.vmenu-category:not(.current):hover,
+.vmenu-item-title a,
+.vmenu-item-title a:hover,
+.vmenu-item-thumbnail,
+.vmenu-item-thumbnail:hover{
+	text-decoration: none !important;
+	border-bottom: 0 !important;
+}
+
+.vmenu-category,
+.vmenu-category:hover{
+	text-decoration: none !important;
+}
+
+
+/*------------------------------------*\
+	MENU
+\*------------------------------------*/
+
+/* Menu categories */
+.vmenu-categories{
+	list-style-type: none;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+.vmenu-categories li{
+	display: inline-block;
+}
+
+.vmenu-category{
+	padding: 4px 8px 8px;
+	margin: 0 4px 5px 0;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.vmenu-category:not(.current){
+	color: #000;
+}
+
+.vmenu-categories .vmenu-category.current{
+	border-width: 1px;
+	border-style: solid;
+}
+
+/* Menu item */
+
+.col1{
+	width: 98%;
+}
+
+.vmenu-item table {
+	table-layout: auto;
+}
+
+.vmenu-item td,
+.vmenu-item table {
+	border-width: 0;
+	margin: 0;
+}
+
+.vmenu article.vmenu-item{
+	display: none;
+	margin-top: 0;
+	margin-bottom: 30px;
+	padding-top: 0;
+}
+
+.vmenu article.vmenu-item.current{
+	display: block;
+}
+
+.vmenu-item-thumbnail-td{
+	vertical-align: middle;
+}
+
+.vmenu-item-thumbnail{
+	float:left;
+	width: 68px;
+	/*height: 80px;*/
+	margin-right: 28px;
+	margin-bottom: 8px;
+}
+
+.vmenu-item-thumbnail img{
+	border: 5px solid #fff;
+}
+
+.vmenu-item-title-desc,
+.vmenu-item-short-description,
+.vmenu-item-title-table{
+	width: 100%;
+}
+
+.vmenu-item-title-table .vmenu-item-price,
+.vmenu-item-title-table .vmenu-item-title-td {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.vmenu-item-title {
+	text-overflow: clip;
+	max-width: 350px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.vmenu-item-title,
+.vmenu-item-price{
+	/*font-family: 'Lobster', cursive;*/
+	line-height: 1.231 !important;
+	white-space: nowrap;
+	font-size: 22px;
+	margin: 0 !important;
+}
+
+.vmenu-item-title a{
+	color: #1D150F;
+}
+
+.vmenu-item-price{
+	font-weight: 300;
+	cursor: default;
+}
+
+.vmenu-item-title-table .vmenu-line{
+	width: 100%;
+	padding-left:5px;
+	padding-right: 5px;
+}
+.vmenu-item-title-table .vmenu-line div{
+	height: 14px;
+	border-bottom: 2px dotted #000;
+}
+
+.vmenu-item-short-description{
+	padding-right: 40px;
+	font-size: 18px;
+	float: left;
+}
+
+.vmenu-item-icons,
+p.vmenu-item-price {
+	float: right;
+}
+
+.vmenu-item-short-description.vmenu-item-short-description-has-1-icons {
+	padding-right: 34px;
+}
+
+.vmenu-item-short-description.vmenu-item-short-description-has-2-icons {
+	padding-right: 66px;
+}
+
+.vmenu-item-short-description.vmenu-item-short-description-has-3-icons {
+	padding-right: 98px;
+}
+
+p.vmenu-item-price {
+	padding-bottom: 15px;
+}
+
+.vmenu-item-descr-icons-wrapper{
+	position: relative;
+}
+.vmenu-item-descr-icons-wrapper .vmenu-item-icons {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.vmenu-item-icons {
+	position: relative;
+}
+
+.vmenu-icon-label {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	z-index: 99;
+	text-align: left;
+	padding: 7px;
+	border-radius: 2px;
+	margin-top: 5px;
+	margin-left: -80px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .4s .2s ease-in-out;
+	width: auto;
+}
+
+.vmenu-item-icons:hover > .vmenu-icon-label,
+.vmenu-item-icons:focus > .vmenu-icon-label,
+.vmenu-item-icons:active > .vmenu-icon-label {
+	visibility: visible;
+	opacity: 1;
+	background-color: rgba( 255, 255, 255, 0.6 );
+}
+
+/* Dotted title */
+.vmenu-dotted-title{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.vmenu-dotted-title td{
+	vertical-align: middle;
+}
+
+.vmenu-dotted-title .vmenu-line{
+	width: 100%;
+}
+
+.vmenu-dotted-title .vmenu-line div{
+	width: 100%;
+	border-bottom-width: 2px;
+	border-bottom-style: dotted;
+}
+
+.vmenu-dotted-title h1,
+.vmenu-dotted-title span{
+	text-overflow: ellipsis;
+	/* Required for text-overflow to do anything */
+	max-width: 1080px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+
+	margin: 0 50px;
+	line-height: 1.3;
+}
+
+.vmenu-dotted-title span{
+	margin-top: -5px;
+}
+
+
+
+/*------------------------------------*\
+	MEDIA QUERIES
+\*------------------------------------*/
+
+/* smaller than 1280px, iPad rules */
+@media screen and (max-width:1279px) {
+
+	/* Menu item */
+	.vmenu-item-title {
+		max-width: 250px;
+	}
+
+	/* Header & Section titles */
+	.vmenu-dotted-title h1,
+	.vmenu-dotted-title span{
+		max-width: 830px;
+	}
+
+}
+
+/* smaller than 1024px, iPad rules */
+@media screen and (max-width:1023px) {
+
+	/* Menu: 1 column */
+	.vmenu article.vmenu-item{
+		width: 98%;
+	}
+
+	/* Menu item */
+	.vmenu-item-title {
+		max-width: 350px;
+	}
+
+	/* Header & Section titles */
+	.vmenu-dotted-title h1,
+	.vmenu-dotted-title span{
+		max-width: 640px;
+		margin: 0 25px;
+	}
+
+	.vmenu-dotted-title h1{
+		font-size: 30px;
+	}
+
+}
+
+/* smaller than 768px */
+@media screen and (max-width:767px) {
+
+	/* Menu categories */
+	.vmenu-categories {
+		font-size: 22px;
+		margin-bottom: 30px;
+	}
+
+	/* Menu item */
+	.vmenu-item-title {
+		max-width: 250px;
+	}
+
+	.vmenu-item-price,
+	.vmenu-item-title{
+		font-size: 18px;
+	}
+
+	/* Header & Section titles */
+	.vmenu-dotted-title h1,
+	.vmenu-dotted-title span{
+		max-width: 526px;
+		margin: 0 15px;
+	}
+
+	.vmenu-dotted-title h1{
+		font-size: 26px;
+	}
+
+}
+
+
+/* smaller than 640px mobile rules */
+@media screen and (max-width:639px) {
+
+	/* Header & Section titles */
+	.vmenu-dotted-title h1,
+	.vmenu-dotted-title span{
+		max-width: 418px;
+		margin: 0 7px;
+	}
+
+	.vmenu-dotted-title h1{
+		font-size: 24px;
+	}
+}
+
+
+/* smaller than 480px mobile rules */
+@media screen and (max-width:479px) {
+
+
+	/* Header & Section titles */
+	.vmenu-dotted-title h1,
+	.vmenu-dotted-title span{
+		max-width: 274px;
+	}
+
+	/* Menu item: float photo */
+	.vmenu-item-thumbnail-td,
+	.vmenu-item-title-desc{
+		float: left;
+		display: block;
+		width: 100%;
+	}
+
+	/* Menu item */
+	.vmenu-item-title {
+		max-width: 200px;
+	}
+
+}

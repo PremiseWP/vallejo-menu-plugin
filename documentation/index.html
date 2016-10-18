@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Vallejo Menu Wordpress Plugin Documentation - Premise WP
+	</title>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed%3A300%7COpen+Sans%3A400italic%2C800%7CLobster' type="text/css">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!--header section-->
+<div class="header">
+	<!--logo-->
+	<a href="http://premisewp.com" class="logo"><img src="img/logo.png" alt="logo"></a>
+	<!--introduction text-->
+	<div class="intro">
+		<p>
+			Hi there and thank you for using a digital product from Premise WP. In order to get the most out of your plugin, please make sure to carefully read all of the information contained in this page. Use the table of contents at the top of this page to jump to a relevant section.
+		</p>
+	</div><!--end introduction text-->
+	<span class="title">Vallejo Menu Wordpress Plugin</span>
+</div><!--end header section-->
+<div class="toc" id="toc">
+
+
+
+
+	<h1>
+		Table of Contents
+	</h1>
+
+	<!-- toc -->
+	<a class="section" href="#sec1_0"><span>1</span> Getting Started</a>
+	<!--<a class="subsection" href="#sec1_1"><span>1.1</span>Download Package Contents</a>-->
+	<a class="subsection" href="#sec1_1"><span>1.1</span>Install Your Plugin</a>
+	<a class="section" href="#sec2_0"><span>2</span> Plugin Structure - How It Works</a>
+	<a class="section" href="#sec3_0"><span>3</span> Create a Menu</a>
+	<a class="subsection" href="#sec3_1"><span>3.1</span>Menu Item</a>
+	<a class="subsection" href="#sec3_2"><span>3.2</span>Setup a Menu</a>
+	<a class="subsection" href="#sec3_3"><span>3.3</span>Add a Menu page</a>
+	<a class="section" href="#sec4_0"><span>4</span> Vallejo Menu Plugin Settings</a>
+	<a class="subsection" href="#sec4_1"><span>4.1</span>Menus Settings</a>
+	<a class="subsection" href="#sec4_2"><span>4.2</span>Auto Share Settings</a>
+	<a class="subsection" href="#sec4_3"><span>4.3</span>Auto Share Logs</a>
+	<a class="section" href="#sec5_0"><span>5</span> Plugin Translation</a>
+	<a class="subsection" href="#sec5_1"><span>5.1</span>Translation using POT File</a>
+	<a class="section" href="#sec6_0"><span>6</span> Updates</a>
+</div><!-- toc -->
+
+<div class="bbcode-body">
+	<br>
+
+
+
+
+	<h1>
+		<a name="sec1_0">1</a> Getting Started<a class="top" href="#toc">top</a>
+	</h1>
+
+	<!--<h2>
+		<a name="sec1_1">1.1</a> Download Package Contents
+	</h2><br>
+	Once you have downloaded and unzipped the Vallejo package you will be faced with a list of files and folders. An explanation of these is as follows. Any item not mentioned here should be ignored for the moment.<br>
+	<br>
+	<b>Folders</b><br>
+	<table>
+		<tr>
+			<td class="option">
+				documentation
+			</td>
+			<td class="value">
+				This is the help documentation. To view simply open the <i>index.html</i> file found inside this folder
+			</td>
+			<td></td>
+		</tr>
+	</table>-->
+
+	<h2>
+		<a name="sec1_1">1.1</a> Install your Plugin
+	</h2><br>
+	Once you have downloaded the Vallejo Menu package, there are 2 ways of installing this plugin. These are as follows:<br>
+	<br>
+	<b>METHOD 1</b><br>
+	<ol style="list-style-type: decimal">
+		<li>Unzip the download package using <a href="http://www.7-zip.org/">7-zip</a> or equivalent.<br>
+		</li>
+		<li>Using a FTP client (eg. <a href="https://filezilla-project.org/">FileZilla</a>), upload its contents to your Wordpress Installation. You will need to place the folder into the following location: <i>wp-content/plugins</i>
+		</li>
+		<li>Now inside your Wordpress admin area, go to <i>Plugins</i> and there you will see the Vallejo Menu plugin.<br>
+		</li>
+		<li>Click <i>Activate</i> to activate the plugin. If you do not see the plugin in this screen, you have done something incorrectly. Review the last few steps again.
+		</li>
+	</ol><b>METHOD 2</b><br>
+	<ol style="list-style-type: decimal">
+		<li>The Vallejo download package is a zip file named <i>vallejo-menu-plugin.zip</i>, this is a compressed version of the plugin.<br>
+		</li>
+		<li>Inside your Wordpress admin area, go to <i>Plugins &gt; Add New &gt; Upload Plugin</i>
+		</li>
+		<li>Click Browse, locate the <i>vallejo-menu-plugin.zip</i> file and upload it<br>
+		</li>
+		<li>Now you will see the Vallejo Menu plugin in the <i>Plugins</i> list.<br>
+		</li>
+		<li>Click <i>Activate</i> to activate the plugin. If you do not see the plugin in this screen, you have done something incorrectly. Review the last few steps again.
+		</li>
+	</ol><br>
+	<div class="note">
+		<b>Congratulations you have now successfully installed the Vallejo Menu Wordpress Plugin</b>
+	</div><br>
+
+
+
+
+	<h1>
+		<a name="sec2_0">2</a> Plugin Structure - How It Works<a class="top" href="#toc">top</a>
+	</h1>The Vallejo Menu plugin is essentially adding two menu entries to the Wordpress dashboard:<br>
+	<ol style="list-style-type: decimal">
+		<li><a href="#sec3_1">Menu Items</a>: add Menu Items and Menu Categories.<br>
+		</li>
+		<li><a href="#sec4_1">Settings > Vallejo Menu Plugin</a>: configure your Menus and the setup the Auto Share functionality.<br>
+		</li>
+	</ol>
+	<br>
+	<br>
+
+
+	<h1>
+		<a name="sec3_0">3</a> Create a Menu<a class="top" href="#toc">top</a>
+	</h1>The Vallejo Menu plugin features a <b>Menu Item</b> custom post type. This can be found in the main Wordpress admin menu under <i>Menu Items</i>. To display menu items in the Menu page, you must first create menu items here.<br>
+	<br>
+	<br>
+
+	<h2>
+		<a name="sec3_1">3.1</a> Menu Item
+	</h2><br>
+	<b>To create a Menu Item do the following:</b><br>
+	<ol style="list-style-type: decimal">
+		<li>Select the <i>Menu Items</i> item in the main admin menu &amp; select "Add New".<br>
+		</li>
+		<li>Give the Menu Item a title.<br>
+		</li>
+		<li>Enter a description of the menu item into the Wordpress editor. The description will only be displayed on the Menu Item page. The Menu in itself will not show the description, use the short description field instead (see next step). A link to each Menu Item page is provided in the Menu page though.<br>
+		</li>
+		<li>In the next box entitled "Menu item info" you have 4 fields to add information to your menu item:
+			<table>
+				<tr>
+					<td class="option">
+						Short Description
+					</td>
+					<td class="value">
+						Short descriptions are displayed in the menu.
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="option">
+						Price
+					</td>
+					<td class="value">
+						Item price (without currency).
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="option">
+						Icon 1
+					</td>
+					<td class="value">
+						Select an icon from the list.
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="option">
+						Label 1
+					</td>
+					<td class="value">
+						Enter the icon label.
+					</td>
+					<td></td>
+				</tr>
+			</table>
+			<div class="note">The "Icon 2" &amp; "Label 2" fields will only appear once you have selected the first icon and saved your changes.
+			</div>
+		</li>
+		<li>In the <i>Menu Category</i> box on the left part of the screen, give your menu item a category. Enter the first letters of an existing category to select it or create a new one directly from here.
+		</li>
+		<li>You may use the <i>Featured Image</i> box to add a photo of the menu item's. It will be displayed next to the menu item in the menu.<br>
+		</li>
+		<li>Now click <i>Publish</i> to publish this menu item. This type of post is mostly used to provide content for the Menu page. The post may also be viewed in it's own page however by clicking the <i>View Post</i> button.
+		</li>
+	</ol>
+	<img src="img/screenshot_menu_item_info.png" width="1024" alt="Menu item info" />
+	<div class="note">You can manage your menu categories in the <i>Menu Items > Menu Categories</i> page. Each menu item must belong to a category in order to appear in the Menu.</div>
+	<br>
+
+	<h2>
+		<a name="sec3_2">3.2</a> Setup a Menu
+	</h2><br>
+	<b>To setup a Menu do the following:</b>
+	<ol style="list-style-type: decimal">
+		<li>Go to <i>Settings > Vallejo Menu Plugin</i>
+		</li>
+		<li>Select the Menu Category you would like to appear first from the <i>Menu Category 1</i> dropdown list.
+		</li>
+		<li>Click the <i>Save Settings</i> button.
+		</li>
+		<li>A new <i>Menu Category 2</i> field will then appear for you to add Menu Categories to that same menu.
+		</li>
+	</ol>
+	<div class="note">Menu Items inside a Category are ordered by Date.</div>
+	<br>
+
+
+	<h2>
+		<a name="sec3_3">3.3</a> Add a Menu page
+	</h2><br>
+	<b>To add a Menu page do the following:</b>
+	<ol style="list-style-type: decimal">
+		<li>Go to <i>Settings > Vallejo Menu Plugin</i>
+		</li>
+		<li>Copy the shortcode of the desired menu, for example: <code>[vmenu number=1]</code>.
+		</li>
+		<li>Add a new page (go to <i>Pages > Add New</i>) and paste the <code>[vmenu number=1]</code> shortcode in the main textarea field.
+		</li>
+		<li>Now click <i>Publish</i> to publish the page.
+		</li>
+	</ol><br>
+
+
+
+	<h1>
+		<a name="sec4_0">4</a> Vallejo Menu Plugin Settings<a class="top" href="#toc">top</a>
+	</h1>In this section we will explain the custom settings that come with the Vallejo Menu plugin, where to find them and what you would use them for.<br>
+	<br>
+	Vallejo Menu Plugin's custom settings can be found at <i>Settings &gt; Vallejo Menu Plugin</i>. These settings will appear once the Vallejo Menu plugin has been successfully installed. The various settings are organized into tabs. Simply click on a tab to show its contents in the main content area.
+	<div class="note">
+		In the admin panel itself, beside each option, you can see an information tooltip containing a short description of what that particular option does. In most cases these short descriptions will be enough to explain how to use the custom settings found in this plugin. Nonetheless all settings are explained here below.
+	</div>
+	<br>
+
+	<h2>
+		<a name="sec4_1">4.1</a> Menus Settings
+	</h2><br>
+	Menus settings will let you configure and add Menus to your website. This tab is open by default when the page is loaded.<br>
+	<br>
+	<table>
+		<tr>
+			<td class="option">
+				Currency
+			</td>
+			<td class="value">
+				This option allows you set the currency symbol you would like to appear before the Menu Items prices.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="option">
+				Display Columns
+			</td>
+			<td class="value">
+				This option allows you to display Menu Items distributed in 1, 2 or 3 columns.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="option">
+				Menu Category X
+			</td>
+			<td class="value">
+				This field allows the selection of a Menu Category. The order in which the categories are displayed in the Menu page will be determined by the number of the category field.
+				After saving the first category, a new Menu Category field will appear, and below it, the <i>Menu 2</i> section. 
+			</td>
+			<td></td>
+		</tr>
+	</table><br>
+
+
+	<h2>
+		<a name="sec4_2">4.2</a> Auto Share Settings
+	</h2><br>
+	This tab controls the Auto Share to social media platforms feature.<br>
+	<br>
+	<table>
+		<tr>
+			<td class="option">
+				Activate
+			</td>
+			<td class="value">
+				Check the box to Activate the Auto Share feature.
+			</td>
+		</tr>
+	</table>
+	<div class="note">
+		Once activated, the Auto Share tab will display settings to setup and manage sharing over the following social media platforms: Facebook & Twitter. You will find inline help and directions to activate social sharing for your Facebook and Twitter accounts. Once correctly setup, a new box named <i>Auto Share</i> will appear on the Post / Page / Menu Item edit screen as shown in the screenshot below.
+	</div>
+	<img src="img/screenshot_auto_share_box.png" width="1024" alt="Auto Share box" />
+	<br><br><br>
+
+	<h2>
+		<a name="sec4_3">4.3</a> Auto Share Logs
+	</h2><br>
+	This tab only appears once the Auto Share is activated. It will display the last five logs of each social media account.<br>
+	<br>
+	<table>
+		<tr>
+			<td class="option">
+				Post ID
+			</td>
+			<td class="value">
+				The post ID (can belong to a page, a menu item or a post).
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="option">
+				Account type
+			</td>
+			<td class="value">
+				Your configured Facebook or Twitter account.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="option">
+				Published On
+			</td>
+			<td class="value">
+				Publication date and time.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="option">
+				Status
+			</td>
+			<td class="value">
+				If a network or authentication error occured during the sharing process, the error message will be displayed here.
+			</td>
+			<td></td>
+		</tr>
+	</table>
+
+	<div class="note">
+		The table rows in <b><span style="color: red">red</span></b> indicate an error occured during the sharing process.
+	</div>
+	<br><br><br>
+
+	<h1>
+		<a name="sec5_0">5</a> Plugin Translation<a class="top" href="#toc">top</a>
+	</h1>The only method to translate this plugin is using a POT file.<br>
+	<br>
+	A POT file is a simple method but it is designed to basically translate the plugin's static text content into another language. For example this would be used when the plugin was designed to be used in English, but your website will be in Italian or another language, and you would like to translate all the parts of the plugin which are not the content you will be writing. This would included back end translation such as admin field names, descriptions etc, as well as front end static text which is visible to the visitor. These front end items would includ things like contact form field names, comment section titles, and other titles which appear automatically rather then being actually entered by you. This method is not designed to handle language switching in your website. If you require this more advanced functionality, you will need to use a plugin. No specific plugins have been tested with this plugin, and hence we cannot guarantee that they will work.<br>
+	<br>
+	<br>
+
+	<h2>
+		<a name="sec5_1">5.1</a> Translation using POT File
+	</h2><br>
+	To translate the plugin using the POT file do the following:<br>
+	<br>
+	<ol style="list-style-type: decimal">
+		<li>Create a .po file for your language, for example <b>de_DE.po</b>
+		</li>
+		<li>Copy all text from provided plugin .pot file into your .po file<br>
+		</li>
+		<li>Edit the .po file with <b>Poedit</b> <a href="http://www.poedit.net/" rel="nofollow">http://www.poedit.net/</a>
+		</li>
+		<li>Create the .mo file<br>
+		</li>
+		<li>Edit the <i>wp-config.php</i> file in your installation and set <b>WPLANG</b> so it matches your languages: <code>define('WPLANG', 'de_DE');</code>
+		</li>
+		<li>The Plugin should now display all messages in your language.
+		</li>
+	</ol>
+	<div class="alert">
+		<b>BACKUP YOUR LANGUAGE PO/MO FILES</b> Upon plugin update, language files are <b>NOT</b> preserved. You will need to manually restore your po/mo files right after the update.
+	</div><br>
+
+
+
+
+	<h1>
+		<a name="sec6_0">6</a> Updates<a class="top" href="#toc">top</a>
+	</h1>In this section we will list all updates and details of changes made in each update. If you are unsure if the version you are using includes certain updates, refer to this section.<br>
+	<br>
+	<b>THERE HAVE BEEN NO UPDATES TO THIS PLUGIN YET</b>
+</div><!--footer section-->
+<div class="footer">
+	<div class="outro">
+		<!--useful links section-->
+		<div class="links">
+			<span>USEFUL LINKS</span>
+			<ul>
+				<li>
+					<a href="http://support.premisewp.com">Support Forums</a> The fastest way to get help
+				</li>
+				<li>
+					<a href="http://premisewp.com">PremiseWP.com</a> Coding &amp; Web Design
+				</li>
+				<li>
+					<a href="http://themeforest.net/user/premisewp/follow">Follow Premise WP</a> Add our items to your homepage.
+				</li>
+				<li>
+					<a href="https://twitter.com/premisewp">Premise WP on Twitter</a> Get informed of new releases &amp; updates
+				</li>
+			</ul>
+		</div><!--getting support section-->
+		<p class="tagline">
+			<span>STILL NEED HELP? - GETTING SUPPORT</span>If having read through all of the information in this page you are still experiencing problems, feel free to contact us. We provide free support* to our buyers via our support forums <i>(See link on right)</i>. Head on over there, read the FAQs, register <i>(using your purchase code)</i> and post your question in the appropriate forum.<br>
+			<br>
+			*<b>Please note that support requests will not be answered if they relate to information available on this page.</b><br>
+			<br>
+			Best regards, the Premise WP Team
+		</p>
+	</div><!--copyright details-->
+	<p class="copyright">
+		Copyright © 2016 Premise WP. All rights reserved.
+	</p>
+</div><!--end footer section-->
+</body>
+</html>
